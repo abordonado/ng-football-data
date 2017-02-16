@@ -12,6 +12,7 @@ import { appRoutes} from "./app.routes";
 import { CompetitionService } from "./core/competition.service"
 import {FixtureService} from "./core/fixture.service";
 import {TeamService} from "./core/team.service";
+import {MaterialModule} from "@angular/material";
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import {TeamService} from "./core/team.service";
     TeamsComponent
   ],
   imports: [
+    MaterialModule,
     BrowserModule,
     FormsModule,
     HttpModule,
