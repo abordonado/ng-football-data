@@ -11,6 +11,7 @@ import { TeamsComponent } from './teams/teams.component';
 import { appRoutes} from "./app.routes";
 import { CompetitionService } from "./core/competition.service"
 import {FixtureService} from "./core/fixture.service";
+import {TeamService} from "./core/team.service";
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import {FixtureService} from "./core/fixture.service";
   ],
   providers: [
     CompetitionService,
-    FixtureService
+    FixtureService,
+    TeamService
   ],
   bootstrap: [AppComponent]
 })
