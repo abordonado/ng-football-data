@@ -9,6 +9,7 @@ import { FixturesComponent } from './fixtures/fixtures.component';
 import { CompetitionsComponent } from './competitions/competitions.component';
 import { TeamsComponent } from './teams/teams.component';
 import { appRoutes} from "./app.routes";
+import { CompetitionService } from "./core/competition.service"
 
 @NgModule({
   declarations: [
@@ -23,7 +24,9 @@ import { appRoutes} from "./app.routes";
     HttpModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [
+    CompetitionService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
