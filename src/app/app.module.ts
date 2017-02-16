@@ -10,6 +10,7 @@ import { CompetitionsComponent } from './competitions/competitions.component';
 import { TeamsComponent } from './teams/teams.component';
 import { appRoutes} from "./app.routes";
 import { CompetitionService } from "./core/competition.service"
+import {FixtureService} from "./core/fixture.service";
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { CompetitionService } from "./core/competition.service"
     RouterModule.forRoot(appRoutes)
   ],
   providers: [
-    CompetitionService
+    CompetitionService,
+    FixtureService
   ],
   bootstrap: [AppComponent]
 })

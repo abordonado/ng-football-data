@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {FixtureService} from "../core/fixture.service";
 
 @Component({
   selector: 'app-fixtures',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FixturesComponent implements OnInit {
 
-  constructor() { }
+  private fixtures: any = [];
+
+  constructor(
+    private fixtureService: FixtureService) { }
 
   ngOnInit() {
+    this.fixtures = [];
+    this.fixtureService.getAllFixtures().subscribe(
+      fixtures => this.fixtures = fixtures,
+      error => console.log(error)
+    );
   }
 
 }
