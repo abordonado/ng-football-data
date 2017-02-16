@@ -2,6 +2,10 @@
   {{title}}
 </h1>
 
-<app-competitions></app-competitions>
-<app-fixtures></app-fixtures>
-<app-teams></app-teams>
+<ul>
+  <li><a routerLink="/competitions">Competitions</a></li>
+  <li><a routerLink="/fixtures">Fixtures</a></li>
+  <li><a routerLink="/teams">Teams</a></li>
+</ul>
+
+<router-outlet></router-outlet>
